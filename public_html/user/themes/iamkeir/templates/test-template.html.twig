@@ -4,11 +4,16 @@
 
   {# @TODO: Add hero to CMS? #}
   {% include 'components/hero.html.twig' with {
-    img_desktop: 'https://placehold.it/2000x500',
-    img: 'https://placehold.it/700x700',
-    img_alt: '',
+    image: {
+      sources: [
+        { srcset: 'https://placehold.it/1200x400', media: '(min-width: 800px)' },
+        { srcset: 'https://placehold.it/800x400', media: '(min-width: 400px)' },
+      ],
+      src: 'https://placehold.it/400x400',
+      alt: 'A cat',
+    },
     title: 'My test page',
-    text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit...'
+    text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit...',
   } %}
 
   {{ page.content|raw }}

@@ -1,15 +1,21 @@
 {# @TODO: Make required variables error if missing? #}
-{# @TODO: Supply images as object with src/alt/breakpoint props? #}
+{% set img %}
+  <img src="{{ image.src }}" alt="{{ image.alt }}" class="hero__image" />
+{% endset %}
 
 <div class="hero">
 
-  {% if img_desktop %}
+  {% if image.sources|length > 0 %}
     <picture>
-      <source srcset="{{ img_desktop }}" media="(min-width: 700px)" />
-      <img src="{{ img }}" alt="{{ img_alt }}" class="hero__image" />
+      {% for source in image.sources %}
+        {% if source.srcset and source.media %}
+          <source srcset="{{ source.srcset }}" media="{{ source.media }}" />
+        {% endif %}
+      {% endfor %}
+      {{ img }}
     </picture>
   {% else %}
-    <img src="{{ img }}" alt="{{ img_alt }}" class="hero__image" />
+    {{ img }}
   {% endif %}
 
   <div class="hero__body">
