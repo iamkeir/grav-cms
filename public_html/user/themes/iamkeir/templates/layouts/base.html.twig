@@ -17,7 +17,7 @@
   {% block stylesheets %}
     {% do assets.addCss('theme://dist/css/app' ~ extension ~ '.css', 98) %}
     {% do assets.addCss('https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css') %}
-    {% do assets.addCss('theme://css/site.css') %}
+    {% do assets.addCss('theme://dist/css/site.css') %}
   {% endblock %}
 
   {% block javascripts %}

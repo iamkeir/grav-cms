@@ -2,7 +2,14 @@
 
 {% block content %}
 
-  {% include 'components/hero.html.twig' %}
+  {# @TODO: Add hero to CMS? #}
+  {% include 'components/hero.html.twig' with {
+    img_desktop: 'https://placehold.it/2000x500',
+    img: 'https://placehold.it/700x700',
+    img_alt: '',
+    title: 'My test page',
+    text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit...'
+  } %}
 
   {{ page.content|raw }}
 

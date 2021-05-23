@@ -1,0 +1,14 @@
+.hero {
+  position: relative;
+  background: blue;
+}
+
+.hero--large {
+
+}
+
+.hero__body {
+  position: absolute;
+  top: 25%;
+  left: 25%;
+}

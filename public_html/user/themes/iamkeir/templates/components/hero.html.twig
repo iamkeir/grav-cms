@@ -1,13 +1,20 @@
-<div class="hero relative">
+{# @TODO: Make required variables error if missing? #}
+{# @TODO: Supply images as object with src/alt/breakpoint props? #}
 
-  <picture>
-    <source srcset="https://placehold.it/2000x500" media="(min-width: 700px)" />
-    <img src="https://placehold.it/700x700" alt="" class="hero__image" />
-  </picture>
+<div class="hero">
 
-  <div class="hero__body absolute top-1/4 left-1/4">
-    <h1 class="hero__title">My test page</h1>
-    <p class="hero__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
+  {% if img_desktop %}
+    <picture>
+      <source srcset="{{ img_desktop }}" media="(min-width: 700px)" />
+      <img src="{{ img }}" alt="{{ img_alt }}" class="hero__image" />
+    </picture>
+  {% else %}
+    <img src="{{ img }}" alt="{{ img_alt }}" class="hero__image" />
+  {% endif %}
+
+  <div class="hero__body">
+    <h1 class="hero__title">{{ title }}</h1>
+    {% if text %}<p class="hero__text">{{ text }}</p>{% endif %}
   </div>
 
 </div>
