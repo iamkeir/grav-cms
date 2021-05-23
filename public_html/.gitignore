@@ -2,6 +2,7 @@
 .composer
 vendor/*
 !*/vendor/*
+node_modules
 
 # Sass
 .sass-cache
@@ -23,8 +24,8 @@ user/data/*
 !user/data/.*
 user/plugins/*
 !user/plugins/.*
-user/themes/*
-!user/themes/.*
+#user/themes/*
+#!user/themes/.*
 user/localhost/config/security.yaml
 user/config/security.yaml
 

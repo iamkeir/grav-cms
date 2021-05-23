@@ -1,0 +1,9 @@
+{% extends 'layouts/base.html.twig' %}
+
+{% block content %}
+
+  {% include 'components/hero.html.twig' %}
+
+  {{ page.content|raw }}
+
+{% endblock %}

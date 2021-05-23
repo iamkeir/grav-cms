@@ -1,0 +1,12 @@
+<div class="header">
+    <div class="">
+        <a class="logo" href="{{ home_url|e }}">
+            {{ config.site.title|e }}
+        </a>
+        {% block header_navigation %}
+            <nav class="main-nav">
+                {% include 'components/navigation.html.twig' %}
+            </nav>
+        {% endblock %}
+    </div>
+</div>
