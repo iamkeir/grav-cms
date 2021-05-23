@@ -9,6 +9,7 @@ node_modules
 
 # Grav Specific
 # @TODO: What can/should we unversion for deployment?
+# @TODO: Ah HA! Themes are typically their own repo/package - hence why you don't version them
 backup/*
 !backup/.*
 cache/*
