@@ -8,6 +8,7 @@ node_modules
 .sass-cache
 
 # Grav Specific
+# @TODO: What can/should we unversion for deployment?
 backup/*
 !backup/.*
 cache/*
@@ -28,7 +29,6 @@ user/plugins/*
 #!user/themes/.*
 user/localhost/config/security.yaml
 user/config/security.yaml
-dist/*
 
 # OS Generated
 .DS_Store*
