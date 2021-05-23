@@ -16,6 +16,10 @@
     text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit...',
   } %}
 
+  <div style="font-size: 130%;">
+    {{ page.summary|raw }}
+  </div>
+
   {{ page.content|raw }}
 
 {% endblock %}
