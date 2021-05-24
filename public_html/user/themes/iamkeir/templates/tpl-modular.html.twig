@@ -1,0 +1,24 @@
+{% extends 'layouts/base.html.twig' %}
+{% set modules = page.collection({ items: '@self.modular' }) %}
+
+{% block content %}
+
+  <h1>{{ page.title }}</h1>
+
+  {# @TODO: How do we make custom fields editable in CMS? #}
+
+  {# @TODO: How do I output a specific module? E.g. modules['_banner'].content #}
+  {% for key, mod in modules %}
+    {{ mod.content|raw }}
+  {% endfor %}
+
+  <hr />
+
+  {# This comes from .md headers #}
+  {% for module in page.collection() %}
+    {{ module.content|raw }}
+  {% endfor %}
+
+  {{ page.content|raw }}
+
+{% endblock %}

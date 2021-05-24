@@ -1,0 +1,8 @@
+{% set module = page %}
+<div style="background: yellow;">
+  <h2>{{ module.title }}</h2>
+
+  <p>I'm a banner module! Variable: {{ module.header.image_align }}</p>
+
+  {{ module.content|raw }}
+</div>
